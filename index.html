@@ -25,237 +25,100 @@
     margin-bottom: 20px;
   }
 
-  .header {
-    background: #F4845F;
-    padding: 26px 26px 20px;
-    color: white;
-  }
-
+  .header { background: #F4845F; padding: 26px 26px 20px; color: white; }
   .emoji-intro { font-size: 2rem; margin-bottom: 8px; }
   .header h1 { font-size: 1.45rem; font-weight: 700; line-height: 1.3; }
   .header p { margin-top: 6px; font-size: 0.93rem; opacity: 0.93; line-height: 1.5; }
 
   .body { padding: 22px 22px 26px; }
-
   .field { margin-bottom: 18px; }
 
-  label.field-label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.88rem;
-    margin-bottom: 5px;
-    color: #444;
-  }
+  label.field-label { display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 5px; color: #444; }
 
   input[type="text"] {
-    width: 100%;
-    padding: 11px 13px;
-    border: 2px solid #E8E0D8;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: inherit;
-    color: #2C2C2C;
-    background: #FAFAFA;
-    transition: border-color 0.2s;
-    -webkit-appearance: none;
+    width: 100%; padding: 11px 13px; border: 2px solid #E8E0D8; border-radius: 10px;
+    font-size: 1rem; font-family: inherit; color: #2C2C2C; background: #FAFAFA;
+    transition: border-color 0.2s; -webkit-appearance: none;
   }
   input[type="text"]:focus { outline: none; border-color: #F4845F; background: white; }
   input[type="text"].error { border-color: #E03E2D; }
 
   .note-box {
-    background: #EEF5FC;
-    border-radius: 10px;
-    padding: 11px 13px;
-    font-size: 0.87rem;
-    color: #3A5F80;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    border-left: 3px solid #5B9BD5;
+    background: #EEF5FC; border-radius: 10px; padding: 11px 13px;
+    font-size: 0.87rem; color: #3A5F80; line-height: 1.5;
+    margin-bottom: 18px; border-left: 3px solid #5B9BD5;
   }
 
-  .section-title {
-    font-size: 0.97rem;
-    font-weight: 700;
-    margin: 20px 0 10px;
-    color: #2C2C2C;
-  }
+  .section-title { font-size: 0.97rem; font-weight: 700; margin: 20px 0 10px; color: #2C2C2C; }
 
-  .day-block {
-    margin-bottom: 14px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1.5px solid #EDE5DC;
-  }
+  .day-block { margin-bottom: 14px; border-radius: 12px; overflow: hidden; border: 1.5px solid #EDE5DC; }
 
   .day-label {
-    background: #2C2C2C;
-    color: white;
-    font-weight: 700;
-    font-size: 0.82rem;
-    padding: 7px 13px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    background: #2C2C2C; color: white; font-weight: 700; font-size: 0.82rem;
+    padding: 7px 13px; letter-spacing: 0.05em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 8px;
   }
-
-  .day-label .wash-tag {
-    font-size: 0.7rem;
-    background: #5B9BD5;
-    border-radius: 4px;
-    padding: 2px 7px;
-    letter-spacing: 0.02em;
-    font-weight: 600;
-  }
+  .day-label .wash-tag { font-size: 0.7rem; background: #5B9BD5; border-radius: 4px; padding: 2px 7px; font-weight: 600; }
 
   .slots { padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; background: #FFF8F0; }
 
   .slot {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 10px;
-    border-radius: 8px;
-    background: white;
-    border: 1.5px solid #EDE5DC;
-    transition: border-color 0.15s;
-    cursor: pointer;
-    position: relative;
+    display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+    border-radius: 8px; background: white; border: 1.5px solid #EDE5DC;
+    transition: border-color 0.15s; cursor: pointer;
   }
-
   .slot:hover:not(.full) { border-color: #F4845F; }
   .slot.full { opacity: 0.55; cursor: not-allowed; background: #F7F7F7; }
   .slot.full .slot-time { text-decoration: line-through; color: #aaa; }
-
-  .slot input[type="checkbox"] {
-    width: 19px; height: 19px;
-    accent-color: #F4845F;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
+  .slot input[type="checkbox"] { width: 19px; height: 19px; accent-color: #F4845F; cursor: pointer; flex-shrink: 0; }
   .slot.full input[type="checkbox"] { cursor: not-allowed; }
+  .slot-time { font-size: 0.93rem; color: #2C2C2C; flex: 1; font-weight: 500; }
+  .slot-meta { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
 
-  .slot-time {
-    font-size: 0.93rem;
-    color: #2C2C2C;
-    flex: 1;
-    font-weight: 500;
-  }
-
-  .slot-meta {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-shrink: 0;
-  }
-
-  .badge {
-    font-size: 0.68rem;
-    font-weight: 700;
-    border-radius: 4px;
-    padding: 2px 6px;
-    letter-spacing: 0.02em;
-  }
+  .badge { font-size: 0.68rem; font-weight: 700; border-radius: 4px; padding: 2px 6px; }
   .badge.wash { background: #5B9BD5; color: white; }
-  .badge.full { background: #E8E0D8; color: #888; }
+  .badge.full-badge { background: #E8E0D8; color: #888; }
   .badge.spots { background: #FFF0E8; color: #C45A30; border: 1px solid #F4C4A8; }
 
   .avatars { display: flex; gap: 3px; }
-
   .avatar {
-    width: 22px; height: 22px;
-    border-radius: 50%;
-    background: #F4845F;
-    color: white;
-    font-size: 0.62rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    flex-shrink: 0;
+    width: 22px; height: 22px; border-radius: 50%; background: #F4845F; color: white;
+    font-size: 0.62rem; font-weight: 700; display: flex; align-items: center;
+    justify-content: center; text-transform: uppercase; flex-shrink: 0;
   }
   .avatar.empty { background: #EDE5DC; color: #BBB; font-size: 0.8rem; }
 
   .submit-btn {
-    width: 100%;
-    padding: 14px;
-    background: #F4845F;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    margin-top: 6px;
+    width: 100%; padding: 14px; background: #F4845F; color: white; border: none;
+    border-radius: 12px; font-size: 1rem; font-weight: 700; font-family: inherit;
+    cursor: pointer; transition: background 0.2s; margin-top: 6px;
   }
   .submit-btn:hover { background: #E56C45; }
-  .submit-btn:active { transform: scale(0.98); }
+  .submit-btn:disabled { background: #CCC; cursor: not-allowed; }
 
-  .error-msg {
-    color: #E03E2D;
-    font-size: 0.85rem;
-    margin-top: 4px;
-    display: none;
-  }
+  .error-msg { color: #E03E2D; font-size: 0.85rem; margin-top: 4px; display: none; }
 
-  .success {
-    display: none;
-    padding: 36px 26px;
-    text-align: center;
-  }
+  .success { display: none; padding: 36px 26px; text-align: center; }
   .success .big-emoji { font-size: 3rem; margin-bottom: 14px; }
   .success h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
   .success p { color: #666; font-size: 0.93rem; line-height: 1.6; }
   .success .submit-btn { max-width: 230px; margin: 20px auto 0; display: block; }
 
-  /* OVERVIEW */
+  .loading-bar { text-align: center; padding: 30px; color: #999; font-size: 0.9rem; }
+
   .overview-card {
-    max-width: 540px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    overflow: hidden;
+    max-width: 540px; margin: 0 auto; background: white;
+    border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden;
   }
-
   .overview-header {
-    background: #2C2C2C;
-    color: white;
-    padding: 16px 22px;
-    font-weight: 700;
-    font-size: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #2C2C2C; color: white; padding: 16px 22px; font-weight: 700;
+    font-size: 1rem; display: flex; justify-content: space-between; align-items: center;
   }
-
   .overview-body { padding: 6px 0 12px; }
-
   .ov-day { padding: 10px 20px 4px; }
-
-  .ov-day-title {
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: #999;
-    margin-bottom: 6px;
-  }
-
-  .ov-slot {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 0;
-    border-bottom: 1px solid #F5F0EB;
-    font-size: 0.9rem;
-  }
+  .ov-day-title { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #999; margin-bottom: 6px; }
+  .ov-slot { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid #F5F0EB; font-size: 0.9rem; }
   .ov-slot:last-child { border-bottom: none; }
-
   .ov-time { min-width: 100px; color: #555; font-size: 0.88rem; flex-shrink: 0; }
   .ov-names { flex: 1; color: #2C2C2C; font-weight: 500; }
   .ov-names.empty { color: #CCC; font-weight: 400; font-style: italic; }
@@ -263,131 +126,43 @@
   .ov-count.full { color: #C45A30; font-weight: 700; }
 
   .name-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: #FFF0E8;
-    border-radius: 5px;
-    padding: 2px 6px 2px 7px;
-    margin: 1px 3px 1px 0;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #C45A30;
+    display: inline-flex; align-items: center; gap: 4px; background: #FFF0E8;
+    border-radius: 5px; padding: 2px 6px 2px 7px; margin: 1px 3px 1px 0;
+    font-size: 0.85rem; font-weight: 600; color: #C45A30;
   }
-
-  .edit-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.78rem;
-    color: #DDD;
-    padding: 1px 3px;
-    border-radius: 3px;
-    line-height: 1;
-    flex-shrink: 0;
-    transition: color 0.15s;
-  }
+  .edit-btn { background: none; border: none; cursor: pointer; font-size: 0.78rem; color: #DDD; padding: 1px 3px; border-radius: 3px; }
   .edit-btn:hover { color: #F4845F; }
 
   .clear-wrap { padding: 10px 20px 6px; }
-  .clear-btn {
-    background: none;
-    border: 1.5px solid #DDD;
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-size: 0.8rem;
-    color: #AAA;
-    cursor: pointer;
-    font-family: inherit;
-  }
+  .clear-btn { background: none; border: 1.5px solid #DDD; border-radius: 8px; padding: 6px 14px; font-size: 0.8rem; color: #AAA; cursor: pointer; font-family: inherit; }
   .clear-btn:hover { border-color: #F4845F; color: #F4845F; }
 
-  /* EDIT MODAL */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 100;
-    align-items: flex-end;
-    justify-content: center;
-  }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 100; align-items: flex-end; justify-content: center; }
   .modal-overlay.open { display: flex; }
-
-  .modal {
-    background: white;
-    border-radius: 20px 20px 0 0;
-    width: 100%;
-    max-width: 540px;
-    max-height: 88vh;
-    overflow-y: auto;
-    padding: 24px 22px 40px;
-    animation: slideUp 0.22s ease;
-  }
-
-  @keyframes slideUp {
-    from { transform: translateY(40px); opacity: 0; }
-    to   { transform: translateY(0);    opacity: 1; }
-  }
-
+  .modal { background: white; border-radius: 20px 20px 0 0; width: 100%; max-width: 540px; max-height: 88vh; overflow-y: auto; padding: 24px 22px 40px; animation: slideUp 0.22s ease; }
+  @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   .modal-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 3px; }
   .modal-sub { font-size: 0.85rem; color: #888; margin-bottom: 18px; }
-
-  .modal-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-
-  .btn-save {
-    flex: 1;
-    padding: 13px;
-    background: #F4845F;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 0.97rem;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    min-width: 120px;
-  }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .btn-save { flex: 1; padding: 13px; background: #F4845F; color: white; border: none; border-radius: 10px; font-size: 0.97rem; font-weight: 700; font-family: inherit; cursor: pointer; min-width: 120px; }
   .btn-save:hover { background: #E56C45; }
-
-  .btn-cancel {
-    padding: 13px 18px;
-    background: none;
-    border: 1.5px solid #DDD;
-    border-radius: 10px;
-    font-size: 0.97rem;
-    font-family: inherit;
-    color: #888;
-    cursor: pointer;
-  }
+  .btn-cancel { padding: 13px 18px; background: none; border: 1.5px solid #DDD; border-radius: 10px; font-size: 0.97rem; font-family: inherit; color: #888; cursor: pointer; }
   .btn-cancel:hover { border-color: #AAA; color: #555; }
-
-  .btn-remove {
-    padding: 13px 14px;
-    background: none;
-    border: 1.5px solid #FFCDD0;
-    border-radius: 10px;
-    font-size: 0.88rem;
-    font-family: inherit;
-    color: #C0392B;
-    cursor: pointer;
-    white-space: nowrap;
-  }
+  .btn-remove { padding: 13px 14px; background: none; border: 1.5px solid #FFCDD0; border-radius: 10px; font-size: 0.88rem; font-family: inherit; color: #C0392B; cursor: pointer; }
   .btn-remove:hover { background: #FFF0F0; }
-
-  /* modal uses same day-block / slot styles but slightly smaller */
   .modal .day-block { margin-bottom: 10px; }
   .modal .slot { padding: 7px 9px; }
 
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #fff; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
+
+<!-- ⬇️ PASTE YOUR GOOGLE SCRIPT URL HERE ⬇️ -->
+<script>
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN-16WBxVbGW1TC1UraLOTMsryh39bS6nwnq3N-zq1UzkSZtMpXYNfxJcqJAsemZaBag/exec';
+</script>
 
 <div class="card" id="formCard">
   <div class="header">
@@ -402,16 +177,13 @@
       <input type="text" id="naam" placeholder="e.g. Lisa de Vries" autocomplete="name" />
       <div class="error-msg" id="nameError">Please enter your name.</div>
     </div>
-
     <div class="note-box">
       💙 <strong>Taking toys home to wash?</strong> You can do this on <strong>Monday, Tuesday and Wednesday</strong>. Those slots are marked with a blue 🧺 badge.
     </div>
-
     <div class="section-title">📅 Choose your time slot(s)</div>
-    <div id="dayblocks"></div>
+    <div id="dayblocks"><div class="loading-bar">⏳ Loading slots...</div></div>
     <div class="error-msg" id="slotError" style="display:none;margin-bottom:10px;">Please select at least one time slot.</div>
-
-    <button class="submit-btn" onclick="submitForm()">Sign me up! 🙌</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">Sign me up! 🙌</button>
   </div>
 
   <div class="success" id="successMsg">
@@ -422,25 +194,24 @@
   </div>
 </div>
 
-<div class="overview-card" id="overviewCard">
+<div class="overview-card">
   <div class="overview-header">
     <span>📋 Who's helping?</span>
     <span id="totalCount" style="font-size:0.85rem;font-weight:400;opacity:0.7"></span>
   </div>
-  <div class="overview-body" id="overviewBody"></div>
+  <div class="overview-body" id="overviewBody"><div class="loading-bar">⏳ Loading sign-ups...</div></div>
   <div class="clear-wrap">
     <button class="clear-btn" onclick="clearAll()">Clear all sign-ups</button>
   </div>
 </div>
 
-<!-- EDIT MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
   <div class="modal">
     <div class="modal-title" id="modalTitle">Edit sign-up</div>
-    <div class="modal-sub" id="modalSub">Change your time slots below.</div>
+    <div class="modal-sub">Change your time slots below.</div>
     <div id="modalDayblocks"></div>
     <div class="modal-actions">
-      <button class="btn-save" onclick="saveEdit()">Save changes</button>
+      <button class="btn-save" id="modalSaveBtn" onclick="saveEdit()">Save changes</button>
       <button class="btn-cancel" onclick="closeModal()">Cancel</button>
       <button class="btn-remove" onclick="removeAll()">Remove me</button>
     </div>
@@ -448,253 +219,109 @@
 </div>
 
 <script>
-const STORAGE_KEY = 'classroom_cleanup_v3';
-const MAX_PER_SLOT = 2;
-
+const MAX = 2;
 const days = [
-  {
-    key: 'mon', label: 'Monday', canWash: true,
-    slots: [
-      { key: '9-11',    label: '9:00 – 11:00' },
-      { key: '11-13',   label: '11:00 – 13:00' },
-      { key: '13-15',   label: '13:00 – 15:00' },
-      { key: '15-1630', label: '15:00 – 16:30' },
-    ]
-  },
-  {
-    key: 'tue', label: 'Tuesday', canWash: true,
-    slots: [
-      { key: '9-11',    label: '9:00 – 11:00' },
-      { key: '11-13',   label: '11:00 – 13:00' },
-      { key: '13-15',   label: '13:00 – 15:00' },
-      { key: '15-1630', label: '15:00 – 16:30' },
-    ]
-  },
-  {
-    key: 'wed', label: 'Wednesday', canWash: true,
-    slots: [
-      { key: '9-11',  label: '9:00 – 11:00' },
-      { key: '11-13', label: '11:00 – 13:00' },
-      { key: '13-15', label: '13:00 – 15:00' },
-    ]
-  },
-  {
-    key: 'thu', label: 'Thursday', canWash: false,
-    slots: [
-      { key: '9-11',    label: '9:00 – 11:00' },
-      { key: '11-13',   label: '11:00 – 13:00' },
-      { key: '13-1430', label: '13:00 – 14:30' },
-    ]
-  },
+  { key:'mon', label:'Monday',    canWash:true,  slots:[{key:'9-11',label:'9:00 – 11:00'},{key:'11-13',label:'11:00 – 13:00'},{key:'13-15',label:'13:00 – 15:00'},{key:'15-1630',label:'15:00 – 16:30'}] },
+  { key:'tue', label:'Tuesday',   canWash:true,  slots:[{key:'9-11',label:'9:00 – 11:00'},{key:'11-13',label:'11:00 – 13:00'},{key:'13-15',label:'13:00 – 15:00'},{key:'15-1630',label:'15:00 – 16:30'}] },
+  { key:'wed', label:'Wednesday', canWash:true,  slots:[{key:'9-11',label:'9:00 – 11:00'},{key:'11-13',label:'11:00 – 13:00'},{key:'13-15',label:'13:00 – 15:00'}] },
+  { key:'thu', label:'Thursday',  canWash:false, slots:[{key:'9-11',label:'9:00 – 11:00'},{key:'11-13',label:'11:00 – 13:00'},{key:'13-1430',label:'13:00 – 14:30'}] },
 ];
 
+let currentData = {};
 let editingName = null;
 
-function getSignups() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
-  catch { return {}; }
+function sk(d,s) { return `${d}__${s}`; }
+function getNames(data,d,s) { return data[sk(d,s)] || []; }
+function initials(n) { return n.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase(); }
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ---- API calls to Google Script ----
+async function apiLoad() {
+  const res = await fetch(SCRIPT_URL + '?action=load');
+  const json = await res.json();
+  return json.data || {};
 }
 
-function saveSignups(data) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-}
-
-function sk(dayKey, slotKey) { return `${dayKey}__${slotKey}`; }
-
-function getSlotNames(data, dayKey, slotKey) {
-  return data[sk(dayKey, slotKey)] || [];
-}
-
-function initials(name) {
-  return name.trim().split(/\s+/).map(w => w[0]).slice(0,2).join('').toUpperCase();
-}
-
-function esc(str) {
-  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-// Returns all slot keys that a given name is signed up for
-function getSlotsForName(data, name) {
-  const result = [];
-  days.forEach(day => {
-    day.slots.forEach(slot => {
-      const names = getSlotNames(data, day.key, slot.key);
-      if (names.includes(name)) result.push(sk(day.key, slot.key));
-    });
+async function apiSave(data) {
+  await fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: JSON.stringify({ action: 'save', data }),
   });
-  return result;
 }
 
-// Returns all unique names across all slots
-function getAllNames(data) {
-  const names = new Set();
-  days.forEach(day => {
-    day.slots.forEach(slot => {
-      getSlotNames(data, day.key, slot.key).forEach(n => names.add(n));
-    });
-  });
-  return [...names].sort();
-}
-
-/* ---- BUILD MAIN FORM ---- */
-function buildSlotEl(day, slot, data, editingFor) {
-  const id = editingFor ? `edit-cb-${day.key}-${slot.key}` : `cb-${day.key}-${slot.key}`;
-  const names = getSlotNames(data, day.key, slot.key);
-  const count = names.length;
-
-  // When editing: a slot is "full" only if it's at max AND this person isn't already in it
+// ---- Build UI ----
+function buildSlotEl(containerId, day, slot, data, editingFor) {
+  const id = `${containerId}-cb-${day.key}-${slot.key}`;
+  const names = getNames(data, day.key, slot.key);
   const alreadyIn = editingFor ? names.includes(editingFor) : false;
-  const isFull = editingFor
-    ? (count >= MAX_PER_SLOT && !alreadyIn)
-    : count >= MAX_PER_SLOT;
+  const isFull = names.length >= MAX && !alreadyIn;
 
-  const slotEl = document.createElement('div');
-  slotEl.className = 'slot' + (isFull ? ' full' : '');
+  const el = document.createElement('div');
+  el.className = 'slot' + (isFull ? ' full' : '');
 
-  let avatarHtml = '';
-  for (let i = 0; i < MAX_PER_SLOT; i++) {
-    if (names[i]) {
-      avatarHtml += `<div class="avatar" title="${esc(names[i])}">${esc(initials(names[i]))}</div>`;
-    } else {
-      avatarHtml += `<div class="avatar empty">+</div>`;
-    }
+  let avatars = '';
+  for (let i=0;i<MAX;i++) {
+    avatars += names[i]
+      ? `<div class="avatar" title="${esc(names[i])}">${esc(initials(names[i]))}</div>`
+      : `<div class="avatar empty">+</div>`;
   }
 
   const washBadge = day.canWash ? `<span class="badge wash">🧺</span>` : '';
-  const spotsLeft = isFull ? 0 : MAX_PER_SLOT - count + (alreadyIn ? 0 : 0);
-  const fullBadge = isFull
-    ? `<span class="badge full">Full</span>`
-    : `<span class="badge spots">${MAX_PER_SLOT - count} spot${MAX_PER_SLOT - count !== 1 ? 's' : ''} left</span>`;
+  const spotsBadge = isFull
+    ? `<span class="badge full-badge">Full</span>`
+    : `<span class="badge spots">${MAX - names.length} spot${MAX-names.length!==1?'s':''} left</span>`;
 
-  slotEl.innerHTML = `
+  el.innerHTML = `
     <input type="checkbox" id="${id}" data-day="${day.key}" data-slot="${slot.key}"
-      ${alreadyIn ? 'checked' : ''}
-      ${isFull ? 'disabled' : ''}>
+      ${alreadyIn?'checked':''} ${isFull?'disabled':''}>
     <label for="${id}" class="slot-time">${slot.label}</label>
-    <div class="slot-meta">
-      ${washBadge}
-      ${fullBadge}
-      <div class="avatars">${avatarHtml}</div>
-    </div>
+    <div class="slot-meta">${washBadge}${spotsBadge}<div class="avatars">${avatars}</div></div>
   `;
 
   if (!isFull) {
-    slotEl.addEventListener('click', (e) => {
+    el.addEventListener('click', e => {
       if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'LABEL') {
-        const cb = slotEl.querySelector('input[type="checkbox"]');
+        const cb = el.querySelector('input');
         if (!cb.disabled) cb.checked = !cb.checked;
       }
     });
   }
-
-  return slotEl;
+  return el;
 }
 
 function buildDayBlocks(containerId, data, editingFor) {
   const container = document.getElementById(containerId);
   container.innerHTML = '';
-
   days.forEach(day => {
     const block = document.createElement('div');
     block.className = 'day-block';
     const washTag = day.canWash ? `<span class="wash-tag">🧺 laundry</span>` : '';
-    block.innerHTML = `<div class="day-label">${day.label}${washTag}</div><div class="slots" id="${containerId}-slots-${day.key}"></div>`;
+    block.innerHTML = `<div class="day-label">${day.label}${washTag}</div><div class="slots" id="${containerId}-s-${day.key}"></div>`;
     container.appendChild(block);
-
-    const slotsDiv = block.querySelector(`#${containerId}-slots-${day.key}`);
-    day.slots.forEach(slot => {
-      slotsDiv.appendChild(buildSlotEl(day, slot, data, editingFor));
-    });
+    const slotsDiv = block.querySelector(`#${containerId}-s-${day.key}`);
+    day.slots.forEach(slot => slotsDiv.appendChild(buildSlotEl(containerId, day, slot, data, editingFor)));
   });
 }
 
-function buildForm() {
-  buildDayBlocks('dayblocks', getSignups(), null);
-}
-
-/* ---- SUBMIT ---- */
-function submitForm() {
-  const naam = document.getElementById('naam').value.trim();
-  const nameError = document.getElementById('nameError');
-  const slotError = document.getElementById('slotError');
-  let valid = true;
-
-  if (!naam) {
-    nameError.style.display = 'block';
-    document.getElementById('naam').classList.add('error');
-    valid = false;
-  } else {
-    nameError.style.display = 'none';
-    document.getElementById('naam').classList.remove('error');
-  }
-
-  const checked = document.querySelectorAll('#dayblocks input[type="checkbox"]:checked');
-  if (checked.length === 0) { slotError.style.display = 'block'; valid = false; }
-  else slotError.style.display = 'none';
-
-  if (!valid) return;
-
-  const data = getSignups();
-
-  // conflict check
-  let conflict = false;
-  checked.forEach(cb => {
-    const names = getSlotNames(data, cb.dataset.day, cb.dataset.slot);
-    if (names.length >= MAX_PER_SLOT && !names.includes(naam)) conflict = true;
-  });
-  if (conflict) { alert('One of your selected slots just filled up. Please choose a different slot.'); buildForm(); return; }
-
-  checked.forEach(cb => {
-    const key = sk(cb.dataset.day, cb.dataset.slot);
-    if (!data[key]) data[key] = [];
-    if (!data[key].includes(naam)) data[key].push(naam);
-  });
-
-  saveSignups(data);
-  document.getElementById('formBody').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
-  buildOverview();
-}
-
-function resetForm() {
-  document.getElementById('naam').value = '';
-  document.getElementById('formBody').style.display = 'block';
-  document.getElementById('successMsg').style.display = 'none';
-  buildForm();
-}
-
-/* ---- OVERVIEW ---- */
-function buildOverview() {
-  const data = getSignups();
+function buildOverview(data) {
   const body = document.getElementById('overviewBody');
-  const totalPeople = new Set();
+  const people = new Set();
   let html = '';
 
   days.forEach(day => {
     let dayHtml = `<div class="ov-day"><div class="ov-day-title">${day.label}</div>`;
     day.slots.forEach(slot => {
-      const names = getSlotNames(data, day.key, slot.key);
-      const isFull = names.length >= MAX_PER_SLOT;
-      names.forEach(n => totalPeople.add(n));
-
-      let nameHtml;
-      if (names.length === 0) {
-        nameHtml = `<span class="ov-names empty">—</span>`;
-      } else {
-        nameHtml = `<span class="ov-names">` +
-          names.map(n =>
-            `<span class="name-chip">${esc(n)}<button class="edit-btn" title="Edit ${esc(n)}'s sign-up" onclick="openEdit('${esc(n)}')">✏️</button></span>`
-          ).join('') +
-          `</span>`;
-      }
-
-      const countClass = isFull ? 'ov-count full' : 'ov-count';
-      dayHtml += `
-        <div class="ov-slot">
-          <span class="ov-time">${slot.label}</span>
-          ${nameHtml}
-          <span class="${countClass}">${names.length}/${MAX_PER_SLOT}</span>
-        </div>`;
+      const names = getNames(data, day.key, slot.key);
+      names.forEach(n => people.add(n));
+      const isFull = names.length >= MAX;
+      const nameHtml = names.length === 0
+        ? `<span class="ov-names empty">—</span>`
+        : `<span class="ov-names">${names.map(n=>`<span class="name-chip">${esc(n)}<button class="edit-btn" onclick="openEdit('${esc(n)}')" title="Edit">✏️</button></span>`).join('')}</span>`;
+      dayHtml += `<div class="ov-slot">
+        <span class="ov-time">${slot.label}</span>
+        ${nameHtml}
+        <span class="ov-count${isFull?' full':''}">${names.length}/${MAX}</span>
+      </div>`;
     });
     dayHtml += `</div>`;
     html += dayHtml;
@@ -702,15 +329,63 @@ function buildOverview() {
 
   body.innerHTML = html;
   document.getElementById('totalCount').textContent =
-    totalPeople.size > 0 ? `${totalPeople.size} parent${totalPeople.size !== 1 ? 's' : ''} signed up` : 'No sign-ups yet';
+    people.size > 0 ? `${people.size} parent${people.size!==1?'s':''} signed up` : 'No sign-ups yet';
 }
 
-/* ---- EDIT MODAL ---- */
+// ---- Submit ----
+async function submitForm() {
+  const naam = document.getElementById('naam').value.trim();
+  let valid = true;
+
+  if (!naam) {
+    document.getElementById('nameError').style.display = 'block';
+    document.getElementById('naam').classList.add('error');
+    valid = false;
+  } else {
+    document.getElementById('nameError').style.display = 'none';
+    document.getElementById('naam').classList.remove('error');
+  }
+
+  const checked = document.querySelectorAll('#dayblocks input:checked');
+  if (!checked.length) { document.getElementById('slotError').style.display='block'; valid=false; }
+  else document.getElementById('slotError').style.display='none';
+  if (!valid) return;
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Saving...';
+
+  const data = await apiLoad();
+
+  checked.forEach(cb => {
+    const key = sk(cb.dataset.day, cb.dataset.slot);
+    if (!data[key]) data[key] = [];
+    if (!data[key].includes(naam)) data[key].push(naam);
+  });
+
+  await apiSave(data);
+  currentData = data;
+
+  btn.disabled = false;
+  btn.innerHTML = 'Sign me up! 🙌';
+
+  document.getElementById('formBody').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+  buildOverview(data);
+}
+
+function resetForm() {
+  document.getElementById('naam').value = '';
+  document.getElementById('formBody').style.display = 'block';
+  document.getElementById('successMsg').style.display = 'none';
+  buildDayBlocks('dayblocks', currentData, null);
+}
+
+// ---- Edit modal ----
 function openEdit(name) {
   editingName = name;
   document.getElementById('modalTitle').textContent = `Edit: ${name}`;
-  document.getElementById('modalSub').textContent = 'Tick the slots you can help. Untick ones you can no longer make.';
-  buildDayBlocks('modalDayblocks', getSignups(), name);
+  buildDayBlocks('modalDayblocks', currentData, name);
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -725,23 +400,23 @@ function closeModalOnOverlay(e) {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 }
 
-function saveEdit() {
+async function saveEdit() {
   if (!editingName) return;
-  const data = getSignups();
+  const btn = document.getElementById('modalSaveBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>Saving...';
+
+  const data = await apiLoad();
   const name = editingName;
 
-  // Remove this person from all slots first
-  days.forEach(day => {
-    day.slots.forEach(slot => {
-      const key = sk(day.key, slot.key);
-      if (data[key]) data[key] = data[key].filter(n => n !== name);
-    });
-  });
+  days.forEach(day => day.slots.forEach(slot => {
+    const key = sk(day.key, slot.key);
+    if (data[key]) data[key] = data[key].filter(n => n !== name);
+  }));
 
-  // Re-add for checked boxes
-  const checked = document.querySelectorAll('#modalDayblocks input[type="checkbox"]:checked');
-  if (checked.length === 0) {
-    if (!confirm('You unchecked all slots. This will remove you completely. Continue?')) return;
+  const checked = document.querySelectorAll('#modalDayblocks input:checked');
+  if (!checked.length && !confirm('You unchecked all slots. This removes you completely. Continue?')) {
+    btn.disabled = false; btn.innerHTML = 'Save changes'; return;
   }
 
   checked.forEach(cb => {
@@ -750,41 +425,58 @@ function saveEdit() {
     if (!data[key].includes(name)) data[key].push(name);
   });
 
-  saveSignups(data);
+  await apiSave(data);
+  currentData = data;
+  btn.disabled = false; btn.innerHTML = 'Save changes';
   closeModal();
-  buildForm();
-  buildOverview();
+  buildDayBlocks('dayblocks', data, null);
+  buildOverview(data);
 }
 
-function removeAll() {
-  if (!editingName) return;
-  if (!confirm(`Remove ${editingName} from all slots?`)) return;
-
-  const data = getSignups();
-  days.forEach(day => {
-    day.slots.forEach(slot => {
-      const key = sk(day.key, slot.key);
-      if (data[key]) data[key] = data[key].filter(n => n !== editingName);
-    });
-  });
-
-  saveSignups(data);
+async function removeAll() {
+  if (!editingName || !confirm(`Remove ${editingName} from all slots?`)) return;
+  const data = await apiLoad();
+  days.forEach(day => day.slots.forEach(slot => {
+    const key = sk(day.key, slot.key);
+    if (data[key]) data[key] = data[key].filter(n => n !== editingName);
+  }));
+  await apiSave(data);
+  currentData = data;
   closeModal();
-  buildForm();
-  buildOverview();
+  buildDayBlocks('dayblocks', data, null);
+  buildOverview(data);
 }
 
-function clearAll() {
-  if (confirm('Clear all sign-ups? This cannot be undone.')) {
-    localStorage.removeItem(STORAGE_KEY);
-    buildForm();
-    buildOverview();
+async function clearAll() {
+  if (!confirm('Clear all sign-ups? This cannot be undone.')) return;
+  await apiSave({});
+  currentData = {};
+  buildDayBlocks('dayblocks', {}, null);
+  buildOverview({});
+}
+
+async function refresh() {
+  try {
+    currentData = await apiLoad();
+    buildDayBlocks('dayblocks', currentData, null);
+    buildOverview(currentData);
+  } catch(e) {
+    document.getElementById('dayblocks').innerHTML = '<div class="loading-bar">⚠️ Could not load data. Please refresh the page.</div>';
   }
 }
 
-// Init
-buildForm();
-buildOverview();
+refresh();
+setInterval(async () => {
+  try {
+    const fresh = await apiLoad();
+    currentData = fresh;
+    buildOverview(fresh);
+    if (!document.getElementById('modalOverlay').classList.contains('open') &&
+        document.getElementById('formBody').style.display !== 'none') {
+      buildDayBlocks('dayblocks', fresh, null);
+    }
+  } catch {}
+}, 30000);
 </script>
 </body>
 </html>
